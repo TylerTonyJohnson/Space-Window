@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  background-color: #040e21;
+  background-image: url("assets/window.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  perspective: 800px;
+}
+
+#control-panel {
+  --x: 0px;
+  --y: 0px;
+  --i: 0deg;
+  --j: 0deg;
+
+  margin: 100px;
+  transform: translate(var(--x), var(--y)) rotateX(var(--i)) rotateY(var(--j));
+
+  border: solid white 1px;
+
+  transition: transform 0.1s ease;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  padding-left: 0;
+  width: 400px;
+  height: 100px;
+  background-color: transparent;
+  color: #fffde7;
+  font-size: 3em;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 0.1em;
+  border: none;
+  transition-property: background-color, padding-left, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+button:hover {
+    background-color: white;
+    padding-left: 2em;
+    color: black;
+  }
